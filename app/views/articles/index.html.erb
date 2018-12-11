@@ -12,9 +12,13 @@
       <a class="general-links" href="/show">show</a>|
       <a class="general-links" href="/ask">ask</a>|
       <a class="general-links" href="/jobs">jobs</a>|
-      <a class="general-links" href="/submit">submit</a>
+      <a class="general-links" href="/articles/new">submit</a>
     </span>
     <a id="login" href="/login">login</a>
 
   </div>
+  <% @articles.each do |article| %>
+    <p><a href="<%= article.link %>"><%= article.title %></a></p>
+    <p>Added by <%= User.find(article.user_id).username %></p>
+  <% end %>
 </center>
