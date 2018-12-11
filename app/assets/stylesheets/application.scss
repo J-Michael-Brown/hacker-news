@@ -1,0 +1,90 @@
+@import "bootstrap";
+
+.header {
+  width: 85%;
+  height: 24px;
+  color: #222222;
+  background-color: #ff6600;
+  font-family: Verdana, Geneva, sans-serif;
+  position: relative;
+  text-align: left;
+}
+
+.header a {
+  display: inline;
+  color: black;
+}
+
+#links {
+  font-size: 9pt;
+}
+
+.header h3 {
+  display: inline;
+  font-size: 10pt;
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+.header-title {
+  margin-left: 23px;
+  color: #222222;
+  font-weight: bold;
+  padding-right: 2px;
+}
+
+.header .header-image {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  border: solid green 1px;
+}
+
+#login {
+  position: absolute;
+  top: 56%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  font-size: 9pt;
+}
+
+@media  only screen and (min-width : 250px) and (max-width : 750px) {
+  .header {
+    width: 100%;
+    height: 44px;
+  }
+
+  .header h3 {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    font-size: 12pt;
+  }
+
+  .header .general-links {
+    padding-bottom: 10px;
+  }
+
+  .header-image {
+    float: left;
+    vertical-align: middle;
+    border: solid white;
+  }
+
+  #links {
+    position: absolute;
+    bottom: 4px;
+    left: 27px;
+  }
+
+  #login {
+    top: 50%;
+  }
+}
