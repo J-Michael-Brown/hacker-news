@@ -5,16 +5,10 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    render :new
   end
 
   def create
-    @user = User.new({
-      :username => 'billybob'
-    })
-    @user.save
     attributes = article_params
-    attributes[:user_id] = @user.id
     attributes[:points] = 0
     @article = Article.new(attributes)
     @article.save
@@ -23,6 +17,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:link, :title, :user_id, :points => 0)
+    params.require(:article).permit(:link, :title, :user_id)
   end
 end
