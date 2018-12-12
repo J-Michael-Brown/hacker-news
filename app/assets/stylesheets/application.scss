@@ -55,6 +55,29 @@
   font-size: 9pt;
 }
 
+.list-item {
+  width: 100%;
+}
+
+.list-item h4 {
+  text-align: left;
+  font-size: 12pt;
+}
+
+.list-item a {
+  color: black;
+}
+
+.list-item a:hover {
+  text-decoration: none;
+}
+
+.list-item p {
+  width: 100%;
+  font-size: 9pt;
+  text-align: left;
+}
+
 @media  only screen and (min-width : 250px) and (max-width : 750px) {
   .header {
     width: 100%;

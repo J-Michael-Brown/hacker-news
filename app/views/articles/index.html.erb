@@ -17,8 +17,15 @@
     <a id="login" href="/users/new">login</a>
 
   </div>
-  <% @articles.each do |article| %>
-    <p><a href="<%= article.link %>"><%= article.title %></a></p>
-    <p>Added by <%= User.find(article.user_id).username %></p>
-  <% end %>
+  <ol>
+    <% @articles.each do |article| %>
+      <li>
+        <div class="list-item">
+          <h4><a href="<%= article.link %>"><%= article.title %></a></h4>
+          <p><%= article.points %> points by <%= User.find(article.user_id).username %> at <%= article.created_at %></p>
+        </div>
+      </li>
+    <% end %>
+
+  </ol>
 </center>
